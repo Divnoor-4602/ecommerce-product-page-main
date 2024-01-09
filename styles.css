@@ -11,3 +11,38 @@
 - Light grayish blue: hsl(223, 64%, 98%)
 - White: hsl(0, 0%, 100%)
 - Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%) */
+
+body {
+  font-family: "Kumbh Sans";
+}
+
+#navbar {
+  gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar a {
+  color: hsl(219, 9%, 45%);
+  text-decoration: none;
+}
+
+.nav-wrap {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-cart-pfp {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 2rem;
+}
