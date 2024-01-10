@@ -17,6 +17,7 @@
   --bar-height: 5px;
   --bar-gap: 0.2rem;
   --animation-time: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--bar-gap) * 2);
 }
 
 body {
@@ -28,6 +29,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 5rem;
 }
 
 #navbar a {
@@ -61,6 +63,9 @@ hr {
   cursor: pointer;
   z-index: 2;
   width: max-content;
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
 }
 
 .hamburger-menu input,
@@ -71,6 +76,9 @@ hr {
   content: "";
   background-color: black;
   border-radius: 50px;
+  transform-origin: left center;
+  transition: width var(--animation-time), opacity var(--animation-time),
+    translate var(--animation-time), rotate var(--animation-time);
 }
 
 .hamburger-menu input {
@@ -81,8 +89,29 @@ hr {
   pointer-events: none;
 }
 
+.hamburger-menu input:checked {
+  opacity: 0%;
+  width: 0;
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: calc(var(--hamburger-height) * 1.41);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: calc(var(--hamburger-height) * 1.41);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+
 @media (max-width: 760px) {
   .nav-wrap a {
+    display: none;
+  }
+
+  hr {
     display: none;
   }
 }
