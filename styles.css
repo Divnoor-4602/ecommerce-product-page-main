@@ -12,6 +12,13 @@
 - White: hsl(0, 0%, 100%)
 - Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%) */
 
+:root {
+  --bar-width: 40px;
+  --bar-height: 5px;
+  --bar-gap: 0.2rem;
+  --animation-time: 200ms ease-in-out;
+}
+
 body {
   font-family: "Kumbh Sans";
 }
@@ -45,4 +52,37 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   margin-top: 2rem;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bar-gap);
+  cursor: pointer;
+  z-index: 2;
+  width: max-content;
+}
+
+.hamburger-menu input,
+.hamburger-menu::after,
+.hamburger-menu::before {
+  width: var(--bar-width);
+  height: var(--bar-height);
+  content: "";
+  background-color: black;
+  border-radius: 50px;
+}
+
+.hamburger-menu input {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  appearance: none;
+  pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  .nav-wrap a {
+    display: none;
+  }
 }
