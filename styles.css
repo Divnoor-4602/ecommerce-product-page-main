@@ -223,6 +223,7 @@ hr {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+  width: -webkit-fill-available;
 }
 
 .quantity button {
@@ -244,9 +245,6 @@ hr {
   }
 }
 
-@media (hover: none) {
-}
-
 .quantity input {
   background-color: hsl(223, 64%, 98%);
   border: 0;
@@ -254,6 +252,36 @@ hr {
 
 .quantity span {
   font-weight: 700;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.cart {
+  width: 100%;
+}
+
+.cart-button {
+  padding: 0.8rem;
+  border-radius: 10px;
+  background-color: hsl(26, 100%, 55%);
+  border: none;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: transform var(--animation-time);
+}
+
+.cart-button:hover {
+  transform: scale(1.1);
 }
 
 @media (max-width: 760px) {
