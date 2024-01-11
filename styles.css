@@ -122,13 +122,13 @@ hr {
   background-color: white;
   color: black;
   width: 20rem;
-  height: 100vh;
+  height: 1vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 2rem;
   font-weight: 800;
-  transition: translate var(--animation-time);
+  transition: translate var(--animation-time), height var(--animation-time);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
@@ -139,6 +139,7 @@ hr {
 
 .hamburger-menu:has(input:checked) + .sidebar-menu {
   translate: 0;
+  height: 100vh;
 }
 
 .carousel-container {
@@ -155,13 +156,34 @@ hr {
 }
 
 .product-main {
+  margin: 2rem 2rem 1rem;
 }
 
 .company-name {
   text-transform: uppercase;
   margin: 0;
   color: hsl(26, 100%, 55%);
-  font-weight: 800;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.product-name {
+  margin: 0;
+  color: hsl(220, 13%, 13%);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2rem;
+  padding-top: 1rem;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  margin: 0;
+  color: hsl(219, 9%, 45%);
+  margin-top: 1rem;
+}
+
+.price-section {
 }
 
 @media (max-width: 760px) {
