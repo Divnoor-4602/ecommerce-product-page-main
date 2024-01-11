@@ -1,7 +1,7 @@
 /* ### Primary
 
 - Orange: hsl(26, 100%, 55%)
-- Pale orange: hsl(25, 100%, 94%)
+hsl(25, 100%, 94%)
 
 ### Neutral
 
@@ -184,6 +184,76 @@ hr {
 }
 
 .price-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-discount-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.discount-price {
+  color: hsl(220, 13%, 13%);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.discount-per {
+  color: hsl(26, 100%, 55%);
+  background-color: hsl(25, 100%, 94%);
+  font-weight: 700;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.4rem;
+}
+
+.orignal-price {
+  color: hsl(220, 14%, 75%);
+  text-decoration: line-through;
+  padding-right: 2rem;
+}
+
+.quantity {
+  background-color: hsl(223, 64%, 98%);
+  padding: 0.75rem;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.quantity button {
+  font-weight: 700;
+  border: none;
+  color: hsl(26, 100%, 55%);
+  padding: 0 0.5rem;
+  background-color: hsl(223, 64%, 98%);
+  transition: transform var(--animation-time);
+}
+
+.quantity button:hover {
+  transform: scale(1.5);
+}
+
+@media (hover: hover) {
+  .quantity button:hover {
+    transform: scale(1.5);
+  }
+}
+
+@media (hover: none) {
+}
+
+.quantity input {
+  background-color: hsl(223, 64%, 98%);
+  border: 0;
+}
+
+.quantity span {
+  font-weight: 700;
 }
 
 @media (max-width: 760px) {

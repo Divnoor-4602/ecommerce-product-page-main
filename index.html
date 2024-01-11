@@ -37,6 +37,7 @@
       integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
     <title>E-commerce product page</title>
   </head>
 
@@ -151,9 +152,18 @@
         weather can offer.
       </p>
       <div class="price-section">
-        <span class="discount-price">$125.00</span>
-        <span class="discount%">50%</span>
-        <span class="orignal-price">$250.0</span>
+        <div class="price-discount-wrap">
+          <span class="discount-price">$125.00</span>
+          <span class="discount-per">50%</span>
+        </div>
+        <div class="orignal-price">$250.0</div>
+      </div>
+      <div class="button-container">
+        <div class="quantity">
+          <button class="decrement" onclick="decreaseQuantity()">-</button>
+          <span id="product-quantity">0</span>
+          <button class="increment" onclick="increaseQuantity()">+</button>
+        </div>
       </div>
     </div>
   </body>
