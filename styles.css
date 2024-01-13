@@ -52,7 +52,7 @@ body {
   gap: 2rem;
 }
 
-hr {
+.nav-hr {
   border: 0;
   height: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -297,7 +297,6 @@ hr {
 
 .cart-name {
   font-weight: 800;
-  padding-bottom: 2rem;
 }
 
 .cart-box {
@@ -329,12 +328,31 @@ hr {
   border: none;
 }
 
+.cart-hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.checkout-button {
+  margin-top: 1.5rem;
+  width: 100%;
+  background-color: hsl(26, 100%, 55%);
+  border: none;
+  padding: 0.75rem;
+  color: white;
+  border-radius: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
 @media (max-width: 760px) {
   .nav-wrap a {
     display: none;
   }
 
-  hr {
+  .nav-hr {
     display: none;
   }
 

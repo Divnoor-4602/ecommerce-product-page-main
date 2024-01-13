@@ -18,10 +18,10 @@ function decreaseQuantity() {
 }
 
 // adding event listener on the cart button so it opens up a modal for checkout
-let cartButton = document.querySelector("#cart-icon-button");
+let cartIconButton = document.querySelector("#cart-icon-button");
 const modal = document.querySelector("[data-modal]");
 
-cartButton.addEventListener("click", () => {
+cartIconButton.addEventListener("click", () => {
   modal.showModal();
 });
 
@@ -36,4 +36,22 @@ modal.addEventListener("click", (e) => {
   ) {
     modal.close();
   }
+});
+
+// add selcted items to the cart
+addToCartButton = document.querySelector(".cart-button");
+addToCartButton.addEventListener("click", () => {
+  let nameProduct = document.querySelector(".product-name").innerText;
+  let productQuantityToAdd =
+    document.querySelector("#product-quantity").innerText;
+  let priceToAdd = document.querySelector(".discount-price").innerText;
+  let totalPrice =
+    parseInt(productQuantityToAdd) * parseInt(priceToAdd.split("$")[1]);
+
+  // adding price information to the cart modal
+  document.querySelector(".name-product").innerText = nameProduct;
+  document.querySelector(
+    ".quantity-price"
+  ).innerText = `${priceToAdd} X ${productQuantityToAdd}`;
+  document.querySelector(".total-price").innerText = `$${totalPrice}`;
 });
