@@ -286,7 +286,8 @@ body {
   transition: transform var(--animation-time);
 }
 
-.cart-button:hover {
+.cart-button:hover,
+.cart-button:active {
   transform: scale(1.1);
 }
 

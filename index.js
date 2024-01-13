@@ -42,8 +42,11 @@ modal.addEventListener("click", (e) => {
 addToCartButton = document.querySelector(".cart-button");
 addToCartButton.addEventListener("click", () => {
   let nameProduct = document.querySelector(".product-name").innerText;
+
   let productQuantityToAdd =
     document.querySelector("#product-quantity").innerText;
+  document.querySelector("#product-quantity").innerText = "0";
+
   let priceToAdd = document.querySelector(".discount-price").innerText;
   let totalPrice =
     parseInt(productQuantityToAdd) * parseInt(priceToAdd.split("$")[1]);
