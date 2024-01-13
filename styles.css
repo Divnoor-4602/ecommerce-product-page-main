@@ -68,6 +68,12 @@ hr {
   z-index: 2;
 }
 
+.cart-icon-button {
+  border: none;
+  padding: 0;
+  background-color: white;
+}
+
 .hamburger-menu {
   display: flex;
   flex-direction: column;
