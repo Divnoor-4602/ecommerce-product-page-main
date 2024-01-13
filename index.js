@@ -41,6 +41,9 @@ modal.addEventListener("click", (e) => {
 // add selcted items to the cart
 addToCartButton = document.querySelector(".cart-button");
 addToCartButton.addEventListener("click", () => {
+  document.querySelector(".cart-box").style.display = "flex";
+  document.querySelector(".checkout-button").style.display = "block";
+  document.querySelector(".empty-message").style.display = "none";
   let nameProduct = document.querySelector(".product-name").innerText;
 
   let productQuantityToAdd =
@@ -57,4 +60,12 @@ addToCartButton.addEventListener("click", () => {
     ".quantity-price"
   ).innerText = `${priceToAdd} X ${productQuantityToAdd}`;
   document.querySelector(".total-price").innerText = `$${totalPrice}`;
+});
+
+// remove button to remove added products in the cart
+const removeProductsButton = document.querySelector(".remove-button");
+removeProductsButton.addEventListener("click", () => {
+  document.querySelector(".cart-box").style.display = "none";
+  document.querySelector(".checkout-button").style.display = "none";
+  document.querySelector(".empty-message").style.display = "block";
 });

@@ -91,20 +91,11 @@
       </aside>
     </div>
     <hr class="nav-hr" />
-    <dialog
-      data-modal
-      style="
-        width: 80vw;
-        height: 35vh;
-        padding: 2rem;
-        border: none;
-        border-radius: 15px;
-        margin-top: 5.5rem;
-      "
-    >
+    <dialog data-modal>
       <div class="cart-items">
         <div class="cart-name">Cart</div>
         <hr class="cart-hr" />
+        <div class="empty-message">Your cart is empty</div>
         <div class="cart-box">
           <div class="product-img-box">
             <img
@@ -142,102 +133,136 @@
         <button class="checkout-button">Checkout</button>
       </div>
     </dialog>
-    <div class="carousel-container">
-      <div
-        id="hero-carousel"
-        class="carousel slide carousel-fade"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active c-item">
-            <img
-              src="./images/image-product-1.jpg"
-              class="d-block w-100 c-img"
-              alt="product-1"
-            />
-          </div>
-          <div class="carousel-item c-item">
-            <img
-              src="./images/image-product-2.jpg"
-              class="d-block w-100 c-img"
-              alt="product-2"
-            />
-          </div>
-          <div class="carousel-item c-item">
-            <img
-              src="./images/image-product-3.jpg"
-              class="d-block w-100 c-img"
-              alt="product-3"
-            />
-          </div>
-          <div class="carousel-item c-item">
-            <img
-              src="./images/image-product-4.jpg"
-              class="d-block w-100 c-img"
-              alt="product-4"
-            />
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#hero-carousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#hero-carousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+    <div class="main">
+      <div class="product-image-container">
+        <img
+          alt="expanded-image-product"
+          src="./images/image-product-1.jpg"
+          class="expanded-image-product"
+        />
+
+        <img
+          src="./images/image-product-1-thumbnail.jpg"
+          alt="thumbnail-container"
+          class="thumbnail-img"
+        />
+
+        <img
+          src="./images/image-product-2-thumbnail.jpg"
+          alt="thumbnail-container"
+          class="thumbnail-img"
+        />
+
+        <img
+          src="./images/image-product-3-thumbnail.jpg"
+          alt="thumbnail-container"
+          class="thumbnail-img"
+        />
+
+        <img
+          src="./images/image-product-4-thumbnail.jpg"
+          alt="thumbnail-container"
+          class="thumbnail-img"
+        />
       </div>
-    </div>
-    <div class="product-main">
-      <p class="company-name">SNEAKER COMPANY</p>
-      <p class="product-name">Fall Limited Edition Sneakers</p>
-      <p class="product-description">
-        These low-profile sneakers are your perfect casual wear companion.
-        Featuring a durable rubber outer sole, they’ll withstand everything the
-        weather can offer.
-      </p>
-      <div class="price-section">
-        <div class="price-discount-wrap">
-          <span class="discount-price">$125.00</span>
-          <span class="discount-per">50%</span>
-        </div>
-        <div class="orignal-price">$250.0</div>
-      </div>
-      <div class="button-container">
-        <div class="quantity">
-          <button class="decrement" onclick="decreaseQuantity()">-</button>
-          <span id="product-quantity">0</span>
-          <button class="increment" onclick="increaseQuantity()">+</button>
-        </div>
-        <div class="cart">
-          <button type="submit" class="cart-button">
-            <svg
-              width="22"
-              height="20"
-              xmlns="http://www.w3.org/2000/svg"
-              class="cart-icon"
-            >
-              <path
-                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
-                fill="hsl(0, 0%, 100%)"
-                fill-rule="nonzero"
+      <div class="carousel-container">
+        <div
+          id="hero-carousel"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active c-item">
+              <img
+                src="./images/image-product-1.jpg"
+                class="d-block w-100 c-img"
+                alt="product-1"
               />
-            </svg>
-            Add to cart
+            </div>
+            <div class="carousel-item c-item">
+              <img
+                src="./images/image-product-2.jpg"
+                class="d-block w-100 c-img"
+                alt="product-2"
+              />
+            </div>
+            <div class="carousel-item c-item">
+              <img
+                src="./images/image-product-3.jpg"
+                class="d-block w-100 c-img"
+                alt="product-3"
+              />
+            </div>
+            <div class="carousel-item c-item">
+              <img
+                src="./images/image-product-4.jpg"
+                class="d-block w-100 c-img"
+                alt="product-4"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#hero-carousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#hero-carousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
           </button>
         </div>
       </div>
+      <div class="product-main">
+        <p class="company-name">SNEAKER COMPANY</p>
+        <p class="product-name">Fall Limited Edition Sneakers</p>
+        <p class="product-description">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div class="price-section">
+          <div class="price-discount-wrap">
+            <span class="discount-price">$125.00</span>
+            <span class="discount-per">50%</span>
+          </div>
+          <div class="orignal-price">$250.0</div>
+        </div>
+        <div class="button-container">
+          <div class="quantity">
+            <button class="decrement" onclick="decreaseQuantity()">-</button>
+            <span id="product-quantity">0</span>
+            <button class="increment" onclick="increaseQuantity()">+</button>
+          </div>
+          <div class="cart">
+            <button type="submit" class="cart-button">
+              <svg
+                width="22"
+                height="20"
+                xmlns="http://www.w3.org/2000/svg"
+                class="cart-icon"
+              >
+                <path
+                  d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                  fill="hsl(0, 0%, 100%)"
+                  fill-rule="nonzero"
+                />
+              </svg>
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+
     <script src="index.js"></script>
   </body>
 </html>
