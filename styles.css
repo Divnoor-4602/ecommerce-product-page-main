@@ -371,6 +371,12 @@ body {
 .thumbnail-img {
   width: 7vw;
   border-radius: 5px;
+  transition: transform var(--animation-time);
+}
+
+.thumbnail-img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 
 .main {
@@ -450,5 +456,9 @@ dialog {
 
   .thumbnail-img {
     width: 5vw;
+  }
+
+  body {
+    margin: 2rem;
   }
 }

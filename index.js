@@ -69,3 +69,15 @@ removeProductsButton.addEventListener("click", () => {
   document.querySelector(".checkout-button").style.display = "none";
   document.querySelector(".empty-message").style.display = "block";
 });
+
+// change image in main product container according to different product views
+elementsToAdd = document.getElementsByClassName("thumbnail-img");
+
+for (const element of elementsToAdd) {
+  element.addEventListener("click", () => {
+    let imageToAdd = element.id;
+    document
+      .querySelector("#expanded-image")
+      .setAttribute("src", `./images/${imageToAdd}.jpg`);
+  });
+}
