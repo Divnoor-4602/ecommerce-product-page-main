@@ -68,7 +68,7 @@ hr {
   z-index: 2;
 }
 
-.cart-icon-button {
+#cart-icon-button {
   border: none;
   padding: 0;
   background-color: white;
@@ -290,6 +290,45 @@ hr {
   transform: scale(1.1);
 }
 
+.modal-dialog {
+  width: 95vw;
+  height: 30vh;
+}
+
+.cart-name {
+  font-weight: 800;
+  padding-bottom: 2rem;
+}
+
+.cart-box {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.product-img {
+  width: 50px;
+  border-radius: 5px;
+  float: left;
+}
+
+.name-product {
+  color: hsl(219, 9%, 45%);
+}
+
+.quantity-price {
+  color: hsl(219, 9%, 45%);
+  padding-right: 1rem;
+}
+
+.total-price {
+  font-weight: 700;
+}
+
+.remove-button {
+  background-color: white;
+  border: none;
+}
+
 @media (max-width: 760px) {
   .nav-wrap a {
     display: none;
@@ -301,6 +340,7 @@ hr {
 
   .sidebar {
     display: block;
+    width: 1px;
   }
 
   #navbar {

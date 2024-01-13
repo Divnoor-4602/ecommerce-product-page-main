@@ -16,3 +16,24 @@ function decreaseQuantity() {
     document.getElementById("product-quantity").innerText = newValue;
   }
 }
+
+// adding event listener on the cart button so it opens up a modal for checkout
+let cartButton = document.querySelector("#cart-icon-button");
+const modal = document.querySelector("[data-modal]");
+
+cartButton.addEventListener("click", () => {
+  modal.showModal();
+});
+
+modal.addEventListener("click", (e) => {
+  // check if the user clicks outside the dimensions of the modal then close the modal
+  const modalDimensions = modal.getBoundingClientRect();
+  if (
+    e.clientX < modalDimensions.left ||
+    e.clientX > modalDimensions.right ||
+    e.clientY < modalDimensions.top ||
+    e.clientY > modalDimensions.bottom
+  ) {
+    modal.close();
+  }
+});
